@@ -64,7 +64,7 @@ VERSION_MICRO := 0
 
 
 #---------------------------------------------------------------------------------
-TARGET		:=	DevHelper
+TARGET		:=	Simple-Cam
 BUILD		:=	build
 LIBTWEEN	:=  $(CURDIR)extlibs/RenderD7/external/tween-engine/
 UNIVCORE	:=	extlibs/RenderD7 extlibs/RenderD7/internal extlibs/RenderD7/external extlibs/RenderD7/external/tween-engine/include/ extlibs/RenderD7/external/tween-engine/include/TweenEngine extlibs/RenderD7/external/tween-engine/source
@@ -255,7 +255,7 @@ $(OUTPUT).cia	:	$(OUTPUT).elf $(OUTPUT).smdh
 
 	$(BANNERTOOL) makesmdh -i "../app/icon.png" -s "$(TARGET)" -l "$(APP_DESCRIPTION)" -p "$(APP_AUTHOR)" -o "../app/icon.bin"
 
-	$(MAKEROM) -f cia -target t -exefslogo -o "../DevHelper.cia" -elf "../DevHelper.elf" -rsf "../app/build-cia.rsf" -banner "../app/banner.bin" -icon "../app/icon.bin" -logo "../app/splash.lz" -DAPP_ROMFS="$(TOPDIR)/$(ROMFS)" -major $(VERSION_MAJOR) -minor $(VERSION_MINOR) -micro $(VERSION_MICRO) -DAPP_VERSION_MAJOR="$(VERSION_MAJOR)"
+	$(MAKEROM) -f cia -target t -exefslogo -o "../Simple-Cam.cia" -elf "../Simple-Cam.elf" -rsf "../app/build-cia.rsf" -banner "../app/banner.bin" -icon "../app/icon.bin" -logo "../app/splash.lz" -DAPP_ROMFS="$(TOPDIR)/$(ROMFS)" -major $(VERSION_MAJOR) -minor $(VERSION_MINOR) -micro $(VERSION_MICRO) -DAPP_VERSION_MAJOR="$(VERSION_MAJOR)"
 #---------------------------------------------------------------------------------
 # you need a rule like this for each extension you use as binary data
 #---------------------------------------------------------------------------------
