@@ -13,7 +13,8 @@ int main()
     th1.start();
     while (RenderD7::MainLoop())
     {
-         
+        RenderD7::OnScreen(Top);
+        RenderD7::DrawText(0, 0, 1.3f, RenderD7::Color::Hex("#FFFFFF"), "Hello World!");
         C3D_FrameEnd(0);
     }
     th1.kill();
