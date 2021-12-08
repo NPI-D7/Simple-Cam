@@ -114,7 +114,7 @@ jobs:
           qrencode -o Simple-Cam-release.png https://github.com/NPI-D7/nightlys/releases/download/$COMMIT_TAG/Simple-Cam.cia
           cp ${{ github.workspace }}/build/* .
           git stage .
-          git commit -m "DevHelper | $COMMIT_HASH"
+          git commit -m "Simple-Cam | $COMMIT_HASH"
           git tag v$CURRENT_DATE
           git push origin master v$CURRENT_DATE
       - name: Release to idk
