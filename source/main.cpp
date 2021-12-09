@@ -6,6 +6,7 @@ void Thread1(RenderD7::Parameter param) {
     }
 }
 rnd7::Clock clocktr;
+rnd7::Time tr = clocktr.getCurrentTime();
 int main()
 {
     RenderD7::Init::Main("Simple-Cam");
@@ -15,7 +16,7 @@ int main()
     while (RenderD7::MainLoop())
     {
         RenderD7::OnScreen(Top);
-        RenderD7::DrawText(0, 0, 1.3f, RenderD7::Color::Hex("#FFFFFF"), std::to_string(clocktr.getCurrentTime()));
+        RenderD7::DrawText(0, 0, 1.3f, RenderD7::Color::Hex("#FFFFFF"), std::to_string(tr.asSeconds()));
         C3D_FrameEnd(0);
     }
    // th1.kill();
